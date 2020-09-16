@@ -1,0 +1,18 @@
+<h1>${title}</h1>
+<img src="./images/apple-logo.png" alt="Apple Logo"/>
+<h2>Arrow with implicit <code>return</code></h2>
+<ul>
+    ${data.map(executive => `<li>${executive.name}</li>`).join('')}
+</ul>
+<h2>Arrow with a <code>return</code></h2>
+<ul>
+    ${data.map(executive => {
+        return `<li>${executive.name}</li>`
+    }).join('')}
+</ul>
+<h2>Function expression</h2>
+<ul>
+    ${data.map(function(executive){
+        return `<li>${executive.name}</li>`
+    }).join('----')}
+</ul>
